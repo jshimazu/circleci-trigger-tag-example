@@ -3,6 +3,8 @@ jobs:
   build:
     docker:
       - image: circleci/ruby
+    trigger_tag:
+      tag: /.*/
     steps:
       - checkout
       - run: echo "run build!!"
